@@ -17,5 +17,6 @@ RUN apt-get update && apt-get install -y ssh \
     curl \
     zsh
 
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/loket/oh-my-zsh/feature/batch-mode/tools/install.sh)"
 RUN git clone https://github.com/longld/peda.git ~/peda
 RUN echo "source ~/peda/peda.py" >> ~/.gdbinit
